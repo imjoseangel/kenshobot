@@ -1,0 +1,13 @@
+[Unit]
+Description=Kensho Telegram Bot service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+Environment=TERM=linux
+ExecStart=/usr/local/sbin/kensho.py
+WorkingDirectory=/usr/local/sbin
+
+[Install]
+WantedBy=multi-user.target
